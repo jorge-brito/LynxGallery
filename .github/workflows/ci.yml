@@ -9,7 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: chmod +x scripts/readme.sh && ./scripts/readme.sh
-      - run: git remote set-url origin ${{ secrets.ssh }}
-      - run: git add README.md && git commit -m "Updated README.md"
-      - run: git push origin HEAD:master
+      - name: Build README.md
+        run: |
+          chmod +x scripts/readme.sh
+          ./scripts/readme.sh
+      - name: Setup git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: Commit changes
+        run: |
+          git add README.md && git commit -m "Updated README.md"
+          git push origin HEAD:master
