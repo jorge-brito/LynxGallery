@@ -49,18 +49,16 @@ function BubbleSort()
         sethue("white")
         fontsize(14)
         text("Sorting array of $N numbers.", w / 2, 50, halign = :center)
-        if !paused
-            if i <= N
-                for j in 1:N - i
-                    a = values[j]
-                    b = values[j + 1]
-                    a > b && swap!(values, j, j + 1)
-                end
-                i += 1
-            else
-                @info "Finished"
-                loop!(false)
+        if i <= N
+            for j in 1:N - i
+                a = values[j]
+                b = values[j + 1]
+                a > b && swap!(values, j, j + 1)
             end
+            i += 1
+        else
+            @info "Finished"
+            loop!(false)
         end
 
         barw = w / N
