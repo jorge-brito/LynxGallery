@@ -3,6 +3,7 @@
 cd src
 examples=$(ls -d -- */)
 cd ..
+sed -i '/\-\s/d' README.md
 for example in $examples; do
     let len=(${#example} - 1)
     ex=(${example::$len})
