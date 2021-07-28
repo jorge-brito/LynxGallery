@@ -9,9 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: chmod +x scripts/readme.sh
-      - run: ./scripts/readme.sh
-      - run: git add README.md && git commit -m "Update README"
+      - run: chmod +x scripts/readme.sh && ./scripts/readme.sh
+      - run: git add README.md && git commit -m "Updated README.md"
       - run: git push -u origin master
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
