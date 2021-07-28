@@ -13,5 +13,3 @@ jobs:
       - run: git remote set-url origin ${{ secrets.ssh }}
       - run: git add README.md && git commit -m "Updated README.md"
       - run: git push origin HEAD:master
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
