@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run current app",
+            "type": "shell",
+            "command": "julia --project=. scripts/run.jl",
+            "problemMatcher": []
+        },
+        {
+            "label": "New app",
+            "type": "shell",
+            "command": "julia --project=. scripts/new.jl ${input:appname} && echo \"${input:appname}\" > scripts/current",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run app",
+            "type": "shell",
+            "command": "julia --project=. src/${input:appname}/main.jl",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "appname",
+            "type": "promptString",
+            "description": "The name of the application"
+        }
+    ]
+}

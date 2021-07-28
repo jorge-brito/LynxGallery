@@ -1,0 +1,15 @@
+name: CI
+on:
+  - push
+  - pull_request
+
+jobs:
+  readme:
+    name: Update README
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: chmod +x scripts/readme.sh
+      - run: ./scripts/readme.sh
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
