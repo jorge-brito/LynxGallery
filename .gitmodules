@@ -1,0 +1,3 @@
+[submodule "src/Sounds.jl"]
+	path = src/Sounds.jl
+	url = https://github.com/jorge-brito/Sounds.jl.git
