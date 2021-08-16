@@ -1,6 +1,6 @@
 # Asteroids
 
-This project was made with the `Lynx.jl` package.
+The [Asteroids](https://en.wikipedia.org/wiki/Asteroids_(video_game)) game made in julia using the [Lynx.jl](https://github.com/jorge-brito/Lynx.jl) package.
 
 ## Preview
 
