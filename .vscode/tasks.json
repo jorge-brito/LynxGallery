@@ -4,21 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Run current app",
-            "type": "shell",
-            "command": "julia --project=. scripts/run.jl",
-            "problemMatcher": []
-        },
-        {
             "label": "New app",
             "type": "shell",
-            "command": "julia --project=. scripts/new.jl ${input:appname} && echo \"${input:appname}\" > scripts/current",
-            "problemMatcher": []
-        },
-        {
-            "label": "Run app",
-            "type": "shell",
-            "command": "julia --project=. src/${input:appname}/main.jl",
+            "command": "julia --project=. scripts/newapp.jl ${input:appname}",
             "problemMatcher": []
         }
     ],
