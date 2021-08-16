@@ -1,7 +1,7 @@
 README(name) = """
 # $name
 
-This project was made with the `Lynx.jl` package.
+This project was made with the [Lynx.jl](https://github.com/jorge-brito/Lynx.jl) package.
 
 ## Preview
 
