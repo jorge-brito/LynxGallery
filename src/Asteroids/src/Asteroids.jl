@@ -1,3 +1,8 @@
+# This example was adapted from: Coding Challenge #46 "Asteroids"
+# by Daniel Shiffman
+#
+# https://thecodingtrain.com/CodingChallenges/046.1-asteroids-part-1.html
+# https://thecodingtrain.com/CodingChallenges/046.2-asteroids-part-2.html
 module Asteroids
 
 using Lynx
